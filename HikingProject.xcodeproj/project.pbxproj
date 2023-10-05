@@ -14,6 +14,7 @@
 		B4024DF32ACF62CB00651B97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4024DF12ACF62CB00651B97 /* LaunchScreen.storyboard */; };
 		B4024E052ACF642600651B97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4024E042ACF642600651B97 /* ViewController.swift */; };
 		B4024E072ACF6A2700651B97 /* TasksTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4024E062ACF6A2700651B97 /* TasksTableTableViewController.swift */; };
+		B4024E092ACF6CDA00651B97 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4024E082ACF6CDA00651B97 /* AddTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B4024DF42ACF62CB00651B97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4024E042ACF642600651B97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B4024E062ACF6A2700651B97 /* TasksTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableTableViewController.swift; sourceTree = "<group>"; };
+		B4024E082ACF6CDA00651B97 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				B4024E042ACF642600651B97 /* ViewController.swift */,
 				B4024E062ACF6A2700651B97 /* TasksTableTableViewController.swift */,
+				B4024E082ACF6CDA00651B97 /* AddTaskViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				B4024DE72ACF62CA00651B97 /* AppDelegate.swift in Sources */,
 				B4024DE92ACF62CA00651B97 /* SceneDelegate.swift in Sources */,
 				B4024E072ACF6A2700651B97 /* TasksTableTableViewController.swift in Sources */,
+				B4024E092ACF6CDA00651B97 /* AddTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

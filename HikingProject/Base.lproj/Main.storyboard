@@ -15,8 +15,22 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TESTTTT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNj-qt-uv9">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eNj-qt-uv9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fa2-hC-Yri"/>
+                            <constraint firstItem="eNj-qt-uv9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mBV-2a-LFm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eNj-qt-uv9" secondAttribute="bottom" id="p0l-Wh-yBK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eNj-qt-uv9" secondAttribute="trailing" id="yjp-Nh-gId"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zet-Sa-HqE"/>
                 </viewController>
@@ -115,7 +129,7 @@
         <!--Create a task-->
         <scene sceneID="CIr-ks-hqV">
             <objects>
-                <viewController id="6cA-mC-wf4" customClass="AddTaskViewController" customModule="MyTaskList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6cA-mC-wf4" customClass="AddTaskViewController" customModule="HikingProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I9o-ws-z87">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
