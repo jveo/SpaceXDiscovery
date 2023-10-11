@@ -75,12 +75,14 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="c7v-Mr-oFZ" id="gMV-59-hOC"/>
-                            <outlet property="delegate" destination="c7v-Mr-oFZ" id="cLQ-Ka-6Ue"/>
-                        </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Hiking Check List" id="7oC-lS-wDL"/>
+                    <navigationItem key="navigationItem" title="Hiking Check List" id="7oC-lS-wDL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3xo-mB-G5b">
+                            <connections>
+                                <action selector="addButton:" destination="c7v-Mr-oFZ" id="a9X-lH-UWE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="6cA-mC-wf4" kind="show" identifier="checkListSeg" id="CUU-2f-cK9"/>
                     </connections>
@@ -113,6 +115,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="giZ-hs-myZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yg4-BB-757">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <tabBarAppearance key="standardAppearance"/>
