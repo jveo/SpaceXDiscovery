@@ -32,7 +32,6 @@ class TasksTableTableViewController: UITableViewController {
             self.coreDataStack.saveContext()
             
             DispatchQueue.main.async {
-//                RELOAD THE TABLE
                 self.fetchTasks()
             }
         }
@@ -88,6 +87,34 @@ class TasksTableTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
+    }
+    
+    //MARK: - Manage Row Deletion
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Remove"){
+            (_,_,completionHandler) in
+            guard let listToRemove = self.tableDataSource.itemIdentifier(for: indexPath) else { return }
+            
+            self.coreDataStack.managedContext.delete(listToRemove)
+            
+            for (index, list) in self.lists.enumerated(){
+                if list == listToRemove{
+                    self.lists.remove(at: index)
+                }
+            }
+            
+            self.coreDataStack.saveContext()
+            self.loadTable()
+            
+            
+            
+            completionHandler(true)
+        }
+        
+        deleteAction.image = UIImage(systemName: "trash")
+        deleteAction.backgroundColor = UIColor(hue: 7.0, saturation: 1, brightness: 0.58, alpha: 1)
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 
 
