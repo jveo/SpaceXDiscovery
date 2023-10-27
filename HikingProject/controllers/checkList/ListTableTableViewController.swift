@@ -10,9 +10,10 @@ import CoreData
 
 class TasksTableTableViewController: UITableViewController {
     
+    //MARK: Properties
     lazy var coreDataStack = CoreDataStack(modelName: "ToDoLists")
     var lists = [List]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.fetchTasks()
@@ -107,7 +108,6 @@ class TasksTableTableViewController: UITableViewController {
             self.loadTable()
             
             
-            
             completionHandler(true)
         }
         
@@ -115,6 +115,11 @@ class TasksTableTableViewController: UITableViewController {
         deleteAction.backgroundColor = UIColor(hue: 7.0, saturation: 1, brightness: 0.58, alpha: 1)
         
         return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? checkBoxTableViewCell else { return }
+
     }
 
 

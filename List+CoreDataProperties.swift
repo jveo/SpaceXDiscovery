@@ -2,7 +2,7 @@
 //  List+CoreDataProperties.swift
 //  HikingProject
 //
-//  Created by Jesse viau on 2023-10-11.
+//  Created by Jesse viau on 2023-10-12.
 //
 //
 
@@ -12,7 +12,7 @@ import CoreData
 
 extension List {
 
-    @nonobjc public class func createFetchRequest() -> NSFetchRequest<List> {
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<List> {
         return NSFetchRequest<List>(entityName: "List")
     }
 
