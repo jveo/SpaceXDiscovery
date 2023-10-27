@@ -5,6 +5,7 @@
         <relationship name="tasks" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TaskItem" inverseName="taskList" inverseEntity="TaskItem"/>
     </entity>
     <entity name="TaskItem" representedClassName="TaskItem" syncable="YES">
+        <attribute name="completed" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="taskName" optional="YES" attributeType="String"/>
         <relationship name="taskList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="List" inverseName="tasks" inverseEntity="List"/>
     </entity>

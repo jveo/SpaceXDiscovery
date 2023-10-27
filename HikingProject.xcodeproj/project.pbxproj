@@ -13,7 +13,7 @@
 		B4024DF02ACF62CB00651B97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4024DEF2ACF62CB00651B97 /* Assets.xcassets */; };
 		B4024DF32ACF62CB00651B97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4024DF12ACF62CB00651B97 /* LaunchScreen.storyboard */; };
 		B4024E052ACF642600651B97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4024E042ACF642600651B97 /* ViewController.swift */; };
-		B4024E072ACF6A2700651B97 /* TasksTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4024E062ACF6A2700651B97 /* TasksTableTableViewController.swift */; };
+		B4024E072ACF6A2700651B97 /* ListTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4024E062ACF6A2700651B97 /* ListTableTableViewController.swift */; };
 		B4024E092ACF6CDA00651B97 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4024E082ACF6CDA00651B97 /* AddTaskViewController.swift */; };
 		B4B6D0ED2AD73DCB00C49DC0 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B6D0EC2AD73DCB00C49DC0 /* Section.swift */; };
 		B4B6D0F02AD73E1100C49DC0 /* coreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B6D0EF2AD73E1100C49DC0 /* coreDataStack.swift */; };
@@ -22,6 +22,7 @@
 		B4B6D0F92AD741FA00C49DC0 /* List+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B6D0F52AD741FA00C49DC0 /* List+CoreDataProperties.swift */; };
 		B4B6D0FA2AD741FA00C49DC0 /* TaskItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B6D0F62AD741FA00C49DC0 /* TaskItem+CoreDataClass.swift */; };
 		B4B6D0FB2AD741FA00C49DC0 /* TaskItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B6D0F72AD741FA00C49DC0 /* TaskItem+CoreDataProperties.swift */; };
+		B4DA30232AD7DA3700FA2E67 /* checkBoxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA30222AD7DA3700FA2E67 /* checkBoxTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +34,7 @@
 		B4024DF22ACF62CB00651B97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4024DF42ACF62CB00651B97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4024E042ACF642600651B97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B4024E062ACF6A2700651B97 /* TasksTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableTableViewController.swift; sourceTree = "<group>"; };
+		B4024E062ACF6A2700651B97 /* ListTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableTableViewController.swift; sourceTree = "<group>"; };
 		B4024E082ACF6CDA00651B97 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		B4B6D0EC2AD73DCB00C49DC0 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		B4B6D0EF2AD73E1100C49DC0 /* coreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreDataStack.swift; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		B4B6D0F52AD741FA00C49DC0 /* List+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		B4B6D0F62AD741FA00C49DC0 /* TaskItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskItem+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		B4B6D0F72AD741FA00C49DC0 /* TaskItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskItem+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		B4DA30222AD7DA3700FA2E67 /* checkBoxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkBoxTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		B4024DE52ACF62CA00651B97 /* HikingProject */ = {
 			isa = PBXGroup;
 			children = (
+				B4DA30212AD7DA1D00FA2E67 /* cells */,
 				B4B6D0EE2AD73DFE00C49DC0 /* coreData */,
 				B4B6D0E92AD73D8E00C49DC0 /* models */,
 				B4024E022ACF63ED00651B97 /* delegates */,
@@ -108,7 +111,7 @@
 		B4B6D0E82AD73D0C00C49DC0 /* checkList */ = {
 			isa = PBXGroup;
 			children = (
-				B4024E062ACF6A2700651B97 /* TasksTableTableViewController.swift */,
+				B4024E062ACF6A2700651B97 /* ListTableTableViewController.swift */,
 			);
 			path = checkList;
 			sourceTree = "<group>";
@@ -132,6 +135,14 @@
 				B4B6D0EF2AD73E1100C49DC0 /* coreDataStack.swift */,
 			);
 			path = coreData;
+			sourceTree = "<group>";
+		};
+		B4DA30212AD7DA1D00FA2E67 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA30222AD7DA3700FA2E67 /* checkBoxTableViewCell.swift */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4DA30232AD7DA3700FA2E67 /* checkBoxTableViewCell.swift in Sources */,
 				B4B6D0F02AD73E1100C49DC0 /* coreDataStack.swift in Sources */,
 				B4B6D0F92AD741FA00C49DC0 /* List+CoreDataProperties.swift in Sources */,
 				B4024E052ACF642600651B97 /* ViewController.swift in Sources */,
@@ -213,7 +225,7 @@
 				B4B6D0F32AD740B800C49DC0 /* ToDoLists.xcdatamodeld in Sources */,
 				B4024DE92ACF62CA00651B97 /* SceneDelegate.swift in Sources */,
 				B4B6D0ED2AD73DCB00C49DC0 /* Section.swift in Sources */,
-				B4024E072ACF6A2700651B97 /* TasksTableTableViewController.swift in Sources */,
+				B4024E072ACF6A2700651B97 /* ListTableTableViewController.swift in Sources */,
 				B4B6D0F82AD741FA00C49DC0 /* List+CoreDataClass.swift in Sources */,
 				B4024E092ACF6CDA00651B97 /* AddTaskViewController.swift in Sources */,
 				B4B6D0FB2AD741FA00C49DC0 /* TaskItem+CoreDataProperties.swift in Sources */,

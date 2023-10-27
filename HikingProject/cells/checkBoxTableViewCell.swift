@@ -8,7 +8,8 @@
 import UIKit
 
 class checkBoxTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var checkListBox: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

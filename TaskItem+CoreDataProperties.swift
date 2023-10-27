@@ -12,7 +12,7 @@ import CoreData
 
 extension TaskItem {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<TaskItem> {
+    @nonobjc public class func createFetchRequest() -> NSFetchRequest<TaskItem> {
         return NSFetchRequest<TaskItem>(entityName: "TaskItem")
     }
 
@@ -20,6 +20,7 @@ extension TaskItem {
     @NSManaged public var taskName: String?
     @NSManaged public var taskList: List?
 
+    
 }
 
 extension TaskItem : Identifiable {
