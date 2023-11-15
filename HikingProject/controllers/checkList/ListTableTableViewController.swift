@@ -117,22 +117,5 @@ class ListTableTableViewController: UITableViewController {
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
     
-    //square
-    //checkmark.square.fill
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? checkBoxTableViewCell else { return }
-
-        let taskItem = TaskItem(context: coreDataStack.container.viewContext)
-        cell.checkListBox.setImage(taskItem.completed ? UIImage(systemName: "checkmark.square.fill") : UIImage(systemName: "square"), for: .normal)
-        if(taskItem.completed == true){
-            print("TRUE")
-            self.coreDataStack.managedContext.
-            self.coreDataStack.saveContext()
-        } else {
-            print("FALSE")
-            coreDataStack.saveContext()
-        }
-    }
-
 
 }

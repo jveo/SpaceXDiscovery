@@ -15,7 +15,8 @@
 		B4024E052ACF642600651B97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4024E042ACF642600651B97 /* ViewController.swift */; };
 		B4024E072ACF6A2700651B97 /* ListTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4024E062ACF6A2700651B97 /* ListTableTableViewController.swift */; };
 		B4024E092ACF6CDA00651B97 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4024E082ACF6CDA00651B97 /* AddTaskViewController.swift */; };
-		B4B6D0ED2AD73DCB00C49DC0 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B6D0EC2AD73DCB00C49DC0 /* Section.swift */; };
+		B4511C0D2B04812300889184 /* SpaceX_Latest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4511C0C2B04812300889184 /* SpaceX_Latest.swift */; };
+		B4511C0F2B0494A000889184 /* spaceXLatestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4511C0E2B0494A000889184 /* spaceXLatestTableViewCell.swift */; };
 		B4B6D0F02AD73E1100C49DC0 /* coreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B6D0EF2AD73E1100C49DC0 /* coreDataStack.swift */; };
 		B4B6D0F32AD740B800C49DC0 /* ToDoLists.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4B6D0F12AD740B800C49DC0 /* ToDoLists.xcdatamodeld */; };
 		B4B6D0F82AD741FA00C49DC0 /* List+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B6D0F42AD741FA00C49DC0 /* List+CoreDataClass.swift */; };
@@ -23,6 +24,7 @@
 		B4B6D0FA2AD741FA00C49DC0 /* TaskItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B6D0F62AD741FA00C49DC0 /* TaskItem+CoreDataClass.swift */; };
 		B4B6D0FB2AD741FA00C49DC0 /* TaskItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B6D0F72AD741FA00C49DC0 /* TaskItem+CoreDataProperties.swift */; };
 		B4DA30232AD7DA3700FA2E67 /* checkBoxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA30222AD7DA3700FA2E67 /* checkBoxTableViewCell.swift */; };
+		B4FD64172B0357B1001CABDA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FD64162B0357B1001CABDA /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +38,8 @@
 		B4024E042ACF642600651B97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B4024E062ACF6A2700651B97 /* ListTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableTableViewController.swift; sourceTree = "<group>"; };
 		B4024E082ACF6CDA00651B97 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
-		B4B6D0EC2AD73DCB00C49DC0 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		B4511C0C2B04812300889184 /* SpaceX_Latest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_Latest.swift; sourceTree = "<group>"; };
+		B4511C0E2B0494A000889184 /* spaceXLatestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spaceXLatestTableViewCell.swift; sourceTree = "<group>"; };
 		B4B6D0EF2AD73E1100C49DC0 /* coreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreDataStack.swift; sourceTree = "<group>"; };
 		B4B6D0F22AD740B800C49DC0 /* ToDoLists.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoLists.xcdatamodel; sourceTree = "<group>"; };
 		B4B6D0F42AD741FA00C49DC0 /* List+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
@@ -44,6 +47,7 @@
 		B4B6D0F62AD741FA00C49DC0 /* TaskItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskItem+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		B4B6D0F72AD741FA00C49DC0 /* TaskItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskItem+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		B4DA30222AD7DA3700FA2E67 /* checkBoxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkBoxTableViewCell.swift; sourceTree = "<group>"; };
+		B4FD64162B0357B1001CABDA /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +128,8 @@
 				B4B6D0F62AD741FA00C49DC0 /* TaskItem+CoreDataClass.swift */,
 				B4B6D0F72AD741FA00C49DC0 /* TaskItem+CoreDataProperties.swift */,
 				B4B6D0F12AD740B800C49DC0 /* ToDoLists.xcdatamodeld */,
-				B4B6D0EC2AD73DCB00C49DC0 /* Section.swift */,
+				B4FD64162B0357B1001CABDA /* API.swift */,
+				B4511C0C2B04812300889184 /* SpaceX_Latest.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				B4DA30222AD7DA3700FA2E67 /* checkBoxTableViewCell.swift */,
+				B4511C0E2B0494A000889184 /* spaceXLatestTableViewCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -219,15 +225,17 @@
 				B4DA30232AD7DA3700FA2E67 /* checkBoxTableViewCell.swift in Sources */,
 				B4B6D0F02AD73E1100C49DC0 /* coreDataStack.swift in Sources */,
 				B4B6D0F92AD741FA00C49DC0 /* List+CoreDataProperties.swift in Sources */,
+				B4511C0D2B04812300889184 /* SpaceX_Latest.swift in Sources */,
 				B4024E052ACF642600651B97 /* ViewController.swift in Sources */,
 				B4B6D0FA2AD741FA00C49DC0 /* TaskItem+CoreDataClass.swift in Sources */,
 				B4024DE72ACF62CA00651B97 /* AppDelegate.swift in Sources */,
+				B4FD64172B0357B1001CABDA /* API.swift in Sources */,
 				B4B6D0F32AD740B800C49DC0 /* ToDoLists.xcdatamodeld in Sources */,
 				B4024DE92ACF62CA00651B97 /* SceneDelegate.swift in Sources */,
-				B4B6D0ED2AD73DCB00C49DC0 /* Section.swift in Sources */,
 				B4024E072ACF6A2700651B97 /* ListTableTableViewController.swift in Sources */,
 				B4B6D0F82AD741FA00C49DC0 /* List+CoreDataClass.swift in Sources */,
 				B4024E092ACF6CDA00651B97 /* AddTaskViewController.swift in Sources */,
+				B4511C0F2B0494A000889184 /* spaceXLatestTableViewCell.swift in Sources */,
 				B4B6D0FB2AD741FA00C49DC0 /* TaskItem+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
