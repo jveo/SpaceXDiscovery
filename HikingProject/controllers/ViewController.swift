@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var spaceXTableView: UITableView!
     
     //MARK: Properties
-    var latestCellIdentifier = "latestCell"
+    var latestCellIdentifier = "launchCell"
     var test = [Launch]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,6 +94,32 @@ class ViewController: UIViewController {
         tableDataSource.apply(snapshot)
     }
     
+    //MARK: setCellImage method
+     func setCellImage(_ launch: Launch, _ cell: spaceXLatestTableViewCell) {
+         //checks if the poster path exists for the selected movie if it doesn't, it displays a system image
+         if(launch.links?.missionPatch != nil){
+            let url = URL(string: (launch.links?.missionPatchSmall)!)
+            var image: UIImage!
+            
+            if let validatedUrl = url {
+                URLSession.shared.dataTask(with: validatedUrl) {
+                    (data, response, error) in
+                    if let error = error { print(error) }
+                    if let data = data {image = UIImage(data: data)}
+                }.resume()
+            }
+            
+            DispatchQueue.main.async {
+                cell.spaceImage.image = image
+            }
+        } else {
+            let image = UIImage(systemName: "nosign")
+            cell.spaceImage.image = image
+            cell.spaceImage.backgroundColor = .darkGray
+            cell.spaceImage.tintColor = .gray
+        }
+    }
+    
     func createDataSource() -> DataSource{
         let dataSource = DataSource(tableView: spaceXTableView){
             tableView, index, launch in
@@ -108,7 +134,8 @@ class ViewController: UIViewController {
 //            cell.movieTitleLabel.text = movie.originalTitle
 //            cell.movieVoteAverage.text = String(format: "%.f/8", movie.voteAverage)
             //cell.label.text = self.spacex_latest.id/
-            cell.label.text = launch.missionName
+            //cell.label.text = launch.missionName
+            self.setCellImage(launch, cell)
             return cell
         }
         

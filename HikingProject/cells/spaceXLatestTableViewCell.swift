@@ -12,6 +12,9 @@ class spaceXLatestTableViewCell: UITableViewCell {
     //MARK: Properties
     @IBOutlet weak var label: UILabel!
     
+    //MARK: IBOutlets
+    @IBOutlet weak var spaceImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
