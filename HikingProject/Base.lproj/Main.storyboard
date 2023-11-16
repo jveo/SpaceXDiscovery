@@ -21,26 +21,22 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="launchCell" rowHeight="100" id="cQX-rW-7EH" customClass="spaceXLatestTableViewCell" customModule="HikingProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="launchCell" rowHeight="150" id="cQX-rW-7EH" customClass="spaceXLatestTableViewCell" customModule="HikingProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cQX-rW-7EH" id="Rsw-fw-b7H">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qZu-nD-eLB">
-                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AMf-f7-7HB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="222" height="138"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="qZu-nD-eLB" firstAttribute="top" secondItem="Rsw-fw-b7H" secondAttribute="top" id="GMx-q6-CPe"/>
-                                                <constraint firstItem="qZu-nD-eLB" firstAttribute="leading" secondItem="Rsw-fw-b7H" secondAttribute="leading" id="HD6-6J-p2z"/>
-                                                <constraint firstAttribute="trailing" secondItem="qZu-nD-eLB" secondAttribute="trailing" id="KYc-29-cQd"/>
-                                                <constraint firstAttribute="bottom" secondItem="qZu-nD-eLB" secondAttribute="bottom" id="Qv4-Fz-ada"/>
-                                            </constraints>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
-                                            <outlet property="spaceImage" destination="qZu-nD-eLB" id="T7y-0n-Y3Y"/>
+                                            <outlet property="spaceImage" destination="AMf-f7-7HB" id="cPv-QP-ylh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
