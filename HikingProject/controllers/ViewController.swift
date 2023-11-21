@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
     
     //MARK: - Aliases
     typealias DataSource = UITableViewDiffableDataSource<Section, Launch>
@@ -18,21 +18,27 @@ class ViewController: UIViewController {
     
     //MARK: Properties
     var latestCellIdentifier = "launchCell"
-    var test = [Launch]()
+    var launches = [Launch]()
+    
+    //MARK: viewDidLoad Method
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchLatestLaunch()
+        spaceXTableView.delegate = self
+        spaceXTableView.dataSource = tableDataSource
+        spaceXTableView.estimatedRowHeight = 150
+    
+        
+        fetchUpcomingLaunches()
     }
 
-    func fetchLatestLaunch(_ query: String? = nil){
-
-        //https://api.spacexdata.com/v3/launches
-        let api_url = "https://api.spacexdata.com/v3/launches"
-
-        print(api_url)
+    func fetchUpcomingLaunches(_ query: String? = nil){
         
-        guard let url = URL(string: api_url) else { return }
+        let all_launches_api_url = "https://api.spacexdata.com/v3/launches"
+        let upcoming_apiUrl = "https://api.spacexdata.com/v3/launches/upcoming"
+    
         
+        guard let url = URL(string: all_launches_api_url) else { return }
+        	
         let dataTask = URLSession.shared.dataTask(with: url){
             data, response, error in
             
@@ -48,9 +54,7 @@ class ViewController: UIViewController {
                     let decoder = JSONDecoder()
                     let results = try decoder.decode([Launch].self, from: data)
                     
-                    self.test = results
-                    print("THE THING")
-                    print(self.test)
+                    self.launches = results
                 } catch DecodingError.valueNotFound(let error, let message){
                     self.errorMessage(error: "Value is missing: \(error)", context: message.debugDescription)
                     print("ERROR \(error)")
@@ -89,7 +93,7 @@ class ViewController: UIViewController {
     func createSnapshot(){
         var snapshot = NSDiffableDataSourceSnapshot<Section, Launch>()
         snapshot.appendSections([.main])
-        snapshot.appendItems(test)
+        snapshot.appendItems(launches)
         snapshot.reloadSections([.main])
         tableDataSource.apply(snapshot)
     }
@@ -97,7 +101,7 @@ class ViewController: UIViewController {
     //MARK: setCellImage method
      func setCellImage(_ launch: Launch, _ cell: spaceXLatestTableViewCell) {
          //checks if the poster path exists for the selected movie if it doesn't, it displays a system image
-         if(launch.links?.missionPatch != nil){
+         if(launch.links?.missionPatchSmall != nil){
             let url = URL(string: (launch.links?.missionPatchSmall)!)
             var image: UIImage!
             
@@ -111,6 +115,7 @@ class ViewController: UIViewController {
             
             DispatchQueue.main.async {
                 cell.spaceImage.image = image
+                
             }
         } else {
             let image = UIImage(systemName: "nosign")
@@ -125,23 +130,40 @@ class ViewController: UIViewController {
             tableView, index, launch in
             
             let cell = tableView.dequeueReusableCell(withIdentifier: self.latestCellIdentifier, for: index) as! spaceXLatestTableViewCell
-            //setting the characteristics of the movie cells
-//            if let customFont = UIFont(name: "movie_title_font", size: 28){
-//                //to support scalable fonts
-//                cell.movieTitleLabel.font = UIFontMetrics(forTextStyle: .title1).scaledFont(for: customFont)
-//            }
-//            self.setCellImage(movie, cell)
-//            cell.movieTitleLabel.text = movie.originalTitle
-//            cell.movieVoteAverage.text = String(format: "%.f/8", movie.voteAverage)
-            //cell.label.text = self.spacex_latest.id/
-            //cell.label.text = launch.missionName
+        
+            
             self.setCellImage(launch, cell)
+            cell.spaceImage.frame(forAlignmentRect: CGRect(x: 0, y: 0, width: 79, height: 100))
+            cell.missionNameLabel.text = launch.missionName
+            cell.launchYear.text = launch.launchYear
+            cell.rocketName.text = launch.rocket?.rocketName
             return cell
         }
-        
         return dataSource
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: self.latestCellIdentifier, for: indexPath) as! spaceXLatestTableViewCell
+        print("PRESSED: \(cell)")
+        return cell
+    }
 
+}
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        print("PRESSED")
+    }
+    
+    
     
 }

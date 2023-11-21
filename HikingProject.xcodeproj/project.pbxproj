@@ -15,8 +15,12 @@
 		B4024E052ACF642600651B97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4024E042ACF642600651B97 /* ViewController.swift */; };
 		B4024E072ACF6A2700651B97 /* ListTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4024E062ACF6A2700651B97 /* ListTableTableViewController.swift */; };
 		B4024E092ACF6CDA00651B97 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4024E082ACF6CDA00651B97 /* AddTaskViewController.swift */; };
-		B4511C0D2B04812300889184 /* SpaceX_Latest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4511C0C2B04812300889184 /* SpaceX_Latest.swift */; };
+		B40B207D2B0C30F10049250C /* rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = B40B207C2B0C30F10049250C /* rocket.png */; };
+		B40B207F2B0C44C50049250C /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40B207E2B0C44C50049250C /* DetailsViewController.swift */; };
+		B4511C0D2B04812300889184 /* All_Launches.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4511C0C2B04812300889184 /* All_Launches.swift */; };
 		B4511C0F2B0494A000889184 /* spaceXLatestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4511C0E2B0494A000889184 /* spaceXLatestTableViewCell.swift */; };
+		B4B0C62F2B06E9B70086BD2B /* Upcoming_Launches.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0C62E2B06E9B70086BD2B /* Upcoming_Launches.swift */; };
+		B4B0C6332B07086C0086BD2B /* MegatransdemoRegular-8M9B0.otf in Resources */ = {isa = PBXBuildFile; fileRef = B4B0C6322B07086C0086BD2B /* MegatransdemoRegular-8M9B0.otf */; };
 		B4B6D0F02AD73E1100C49DC0 /* coreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B6D0EF2AD73E1100C49DC0 /* coreDataStack.swift */; };
 		B4B6D0F32AD740B800C49DC0 /* ToDoLists.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4B6D0F12AD740B800C49DC0 /* ToDoLists.xcdatamodeld */; };
 		B4B6D0F82AD741FA00C49DC0 /* List+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B6D0F42AD741FA00C49DC0 /* List+CoreDataClass.swift */; };
@@ -38,8 +42,12 @@
 		B4024E042ACF642600651B97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B4024E062ACF6A2700651B97 /* ListTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableTableViewController.swift; sourceTree = "<group>"; };
 		B4024E082ACF6CDA00651B97 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
-		B4511C0C2B04812300889184 /* SpaceX_Latest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_Latest.swift; sourceTree = "<group>"; };
+		B40B207C2B0C30F10049250C /* rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rocket.png; path = ../../../../../../../../Downloads/rocket.png; sourceTree = "<group>"; };
+		B40B207E2B0C44C50049250C /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		B4511C0C2B04812300889184 /* All_Launches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = All_Launches.swift; sourceTree = "<group>"; };
 		B4511C0E2B0494A000889184 /* spaceXLatestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spaceXLatestTableViewCell.swift; sourceTree = "<group>"; };
+		B4B0C62E2B06E9B70086BD2B /* Upcoming_Launches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upcoming_Launches.swift; sourceTree = "<group>"; };
+		B4B0C6322B07086C0086BD2B /* MegatransdemoRegular-8M9B0.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MegatransdemoRegular-8M9B0.otf"; sourceTree = "<group>"; };
 		B4B6D0EF2AD73E1100C49DC0 /* coreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreDataStack.swift; sourceTree = "<group>"; };
 		B4B6D0F22AD740B800C49DC0 /* ToDoLists.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoLists.xcdatamodel; sourceTree = "<group>"; };
 		B4B6D0F42AD741FA00C49DC0 /* List+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
@@ -80,6 +88,8 @@
 		B4024DE52ACF62CA00651B97 /* HikingProject */ = {
 			isa = PBXGroup;
 			children = (
+				B40B20792B0C301A0049250C /* Images */,
+				B4B0C6312B0708140086BD2B /* Fonts */,
 				B4DA30212AD7DA1D00FA2E67 /* cells */,
 				B4B6D0EE2AD73DFE00C49DC0 /* coreData */,
 				B4B6D0E92AD73D8E00C49DC0 /* models */,
@@ -108,8 +118,25 @@
 				B4B6D0E82AD73D0C00C49DC0 /* checkList */,
 				B4024E042ACF642600651B97 /* ViewController.swift */,
 				B4024E082ACF6CDA00651B97 /* AddTaskViewController.swift */,
+				B40B207E2B0C44C50049250C /* DetailsViewController.swift */,
 			);
 			path = controllers;
+			sourceTree = "<group>";
+		};
+		B40B20792B0C301A0049250C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B40B207C2B0C30F10049250C /* rocket.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		B4B0C6312B0708140086BD2B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B4B0C6322B07086C0086BD2B /* MegatransdemoRegular-8M9B0.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		B4B6D0E82AD73D0C00C49DC0 /* checkList */ = {
@@ -129,7 +156,8 @@
 				B4B6D0F72AD741FA00C49DC0 /* TaskItem+CoreDataProperties.swift */,
 				B4B6D0F12AD740B800C49DC0 /* ToDoLists.xcdatamodeld */,
 				B4FD64162B0357B1001CABDA /* API.swift */,
-				B4511C0C2B04812300889184 /* SpaceX_Latest.swift */,
+				B4511C0C2B04812300889184 /* All_Launches.swift */,
+				B4B0C62E2B06E9B70086BD2B /* Upcoming_Launches.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -210,8 +238,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4024DF32ACF62CB00651B97 /* LaunchScreen.storyboard in Resources */,
+				B40B207D2B0C30F10049250C /* rocket.png in Resources */,
 				B4024DF02ACF62CB00651B97 /* Assets.xcassets in Resources */,
 				B4024DEE2ACF62CA00651B97 /* Main.storyboard in Resources */,
+				B4B0C6332B07086C0086BD2B /* MegatransdemoRegular-8M9B0.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,11 +255,13 @@
 				B4DA30232AD7DA3700FA2E67 /* checkBoxTableViewCell.swift in Sources */,
 				B4B6D0F02AD73E1100C49DC0 /* coreDataStack.swift in Sources */,
 				B4B6D0F92AD741FA00C49DC0 /* List+CoreDataProperties.swift in Sources */,
-				B4511C0D2B04812300889184 /* SpaceX_Latest.swift in Sources */,
+				B4511C0D2B04812300889184 /* All_Launches.swift in Sources */,
 				B4024E052ACF642600651B97 /* ViewController.swift in Sources */,
 				B4B6D0FA2AD741FA00C49DC0 /* TaskItem+CoreDataClass.swift in Sources */,
+				B4B0C62F2B06E9B70086BD2B /* Upcoming_Launches.swift in Sources */,
 				B4024DE72ACF62CA00651B97 /* AppDelegate.swift in Sources */,
 				B4FD64172B0357B1001CABDA /* API.swift in Sources */,
+				B40B207F2B0C44C50049250C /* DetailsViewController.swift in Sources */,
 				B4B6D0F32AD740B800C49DC0 /* ToDoLists.xcdatamodeld in Sources */,
 				B4024DE92ACF62CA00651B97 /* SceneDelegate.swift in Sources */,
 				B4024E072ACF6A2700651B97 /* ListTableTableViewController.swift in Sources */,
