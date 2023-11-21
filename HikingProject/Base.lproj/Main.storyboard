@@ -7,6 +7,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,7 +24,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="separatorColor" systemColor="systemGray2Color"/>
-                                <color key="sectionIndexBackgroundColor" name="AccentColor"/>
+                                <color key="sectionIndexBackgroundColor" name="Space_Color"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="launchCell" rowHeight="100" id="5q5-NN-WAV" customClass="spaceXLatestTableViewCell" customModule="HikingProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="100"/>
@@ -115,7 +116,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="zet-Sa-HqE"/>
                     <connections>
@@ -130,23 +131,203 @@
         <scene sceneID="FnF-hd-IcQ">
             <objects>
                 <viewController id="3Gk-MA-rE2" customClass="DetailsViewController" customModule="HikingProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Hnt-SY-ybV">
+                    <view key="view" contentMode="scaleToFill" id="255-R1-R0i">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="ivs-ta-13O"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iEb-lW-weD">
+                                <rect key="frame" x="10" y="123" width="373" height="646"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9V5-45-hAf">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="598.33333333333337"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4u-fd-gPe">
+                                                <rect key="frame" x="0.0" y="0.0" width="373" height="350"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VND-rw-T4N">
+                                                        <rect key="frame" x="118" y="295" width="245" height="45"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMu-vO-RPe">
+                                                                <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="jMu-vO-RPe" secondAttribute="height" multiplier="1:1" id="e7Z-py-Ok1"/>
+                                                                </constraints>
+                                                                <color key="tintColor" name="CampGreen"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
+                                                            </button>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSr-2N-Pn5">
+                                                                <rect key="frame" x="50" y="0.0" width="45" height="45"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="HSr-2N-Pn5" secondAttribute="height" multiplier="1:1" id="jGK-Rc-obT"/>
+                                                                </constraints>
+                                                                <color key="tintColor" name="CampGreen"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
+                                                            </button>
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GW9-Xf-EoU">
+                                                                <rect key="frame" x="100" y="0.0" width="45" height="45"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="GW9-Xf-EoU" secondAttribute="height" multiplier="1:1" id="pVN-5t-wAS"/>
+                                                                </constraints>
+                                                                <color key="tintColor" name="CampGreen"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
+                                                            </button>
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mik-VX-xoo">
+                                                                <rect key="frame" x="150" y="0.0" width="45" height="45"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="mik-VX-xoo" secondAttribute="height" multiplier="1:1" id="FfI-SY-B3l"/>
+                                                                </constraints>
+                                                                <color key="tintColor" name="CampGreen"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
+                                                            </button>
+                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5K1-Tf-SvM">
+                                                                <rect key="frame" x="200" y="0.0" width="45" height="45"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="5K1-Tf-SvM" secondAttribute="height" multiplier="1:1" id="H5j-av-Zbd"/>
+                                                                </constraints>
+                                                                <color key="tintColor" name="CampGreen"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="tintColor" systemColor="labelColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="6GS-vi-ldp"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJJ-kW-szy">
+                                                        <rect key="frame" x="312.33333333333331" y="10" width="50.666666666666686" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="DlV-yT-GFQ"/>
+                                                        </constraints>
+                                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                                                    </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wdv-cD-gn8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="340"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="350" id="5BO-0o-5rU"/>
+                                                    <constraint firstItem="Wdv-cD-gn8" firstAttribute="leading" secondItem="d4u-fd-gPe" secondAttribute="leading" id="7UD-Pj-UNs"/>
+                                                    <constraint firstItem="EJJ-kW-szy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="d4u-fd-gPe" secondAttribute="leading" constant="10" id="C61-Xa-c6v"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Wdv-cD-gn8" secondAttribute="trailing" id="L2L-9y-ROg"/>
+                                                    <constraint firstAttribute="bottom" secondItem="VND-rw-T4N" secondAttribute="bottom" constant="10" id="RrY-yB-wkC"/>
+                                                    <constraint firstAttribute="trailing" secondItem="EJJ-kW-szy" secondAttribute="trailing" constant="10" id="SJI-e5-WcT"/>
+                                                    <constraint firstItem="VND-rw-T4N" firstAttribute="top" secondItem="Wdv-cD-gn8" secondAttribute="bottom" constant="-45" id="V7K-R0-nTG"/>
+                                                    <constraint firstItem="EJJ-kW-szy" firstAttribute="top" secondItem="d4u-fd-gPe" secondAttribute="top" constant="10" id="bKb-LK-F4P"/>
+                                                    <constraint firstItem="Wdv-cD-gn8" firstAttribute="top" secondItem="d4u-fd-gPe" secondAttribute="top" id="cnZ-9m-1Bj"/>
+                                                    <constraint firstAttribute="trailing" secondItem="VND-rw-T4N" secondAttribute="trailing" constant="10" id="j0P-rw-JFc"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mission Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06S-2a-aUp">
+                                                <rect key="frame" x="0.0" y="358" width="373" height="33.666666666666686"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campsite Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwJ-XE-z95">
+                                                <rect key="frame" x="0.0" y="399.66666666666663" width="373" height="20.333333333333314"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="campDetails" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sW9-Q3-PyL">
+                                                <rect key="frame" x="0.0" y="428" width="373" height="20.333333333333314"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="esz-3T-YNR">
+                                                <rect key="frame" x="0.0" y="456.33333333333337" width="373" height="142"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="142" id="oOS-YO-rbh"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kpq-tx-23N">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="IUs-eE-e74" customClass="CampImageCollectionViewCell" customModule="Camping_App" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="7" width="128" height="128"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="IN2-mo-TVP">
+                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hou" translatesAutoresizingMaskIntoConstraints="NO" id="Rck-ap-1DY">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="Rck-ap-1DY" secondAttribute="height" multiplier="1:1" id="kX9-R9-reR"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="Rck-ap-1DY" firstAttribute="top" secondItem="IN2-mo-TVP" secondAttribute="top" id="87k-cL-ryW"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Rck-ap-1DY" secondAttribute="bottom" id="Wxc-SD-HZT"/>
+                                                                <constraint firstItem="Rck-ap-1DY" firstAttribute="leading" secondItem="IN2-mo-TVP" secondAttribute="leading" id="ZHv-DV-8Ml"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Rck-ap-1DY" secondAttribute="trailing" id="jef-m8-wiS"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="cellImageView" destination="Rck-ap-1DY" id="o59-D5-sdK"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IpM-WD-5LL">
+                                                <rect key="frame" x="0.0" y="598.33333333333337" width="373" height="0.0"/>
+                                                <color key="backgroundColor" name="CampGreen"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Book Now!" cornerStyle="capsule"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9V5-45-hAf" firstAttribute="bottom" secondItem="zil-YH-Lp1" secondAttribute="bottom" id="4Qq-8s-XXN"/>
+                                    <constraint firstItem="9V5-45-hAf" firstAttribute="trailing" secondItem="zil-YH-Lp1" secondAttribute="trailing" id="9yX-pZ-0JB"/>
+                                    <constraint firstItem="9V5-45-hAf" firstAttribute="leading" secondItem="zil-YH-Lp1" secondAttribute="leading" id="fWD-Tv-aZB"/>
+                                    <constraint firstItem="9V5-45-hAf" firstAttribute="width" secondItem="1gL-2d-OnU" secondAttribute="width" id="iMn-MW-L31"/>
+                                    <constraint firstItem="zil-YH-Lp1" firstAttribute="top" secondItem="9V5-45-hAf" secondAttribute="top" id="vO6-Ff-9Ie"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="zil-YH-Lp1"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="1gL-2d-OnU"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sZd-Px-vXU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sZd-Px-vXU" firstAttribute="bottom" secondItem="iEb-lW-weD" secondAttribute="bottom" id="Iq3-YF-35H"/>
+                            <constraint firstItem="iEb-lW-weD" firstAttribute="top" secondItem="sZd-Px-vXU" secondAttribute="top" constant="20" id="gWT-QJ-MiM"/>
+                            <constraint firstItem="sZd-Px-vXU" firstAttribute="trailing" secondItem="iEb-lW-weD" secondAttribute="trailing" constant="10" id="gf6-Y0-A67"/>
+                            <constraint firstItem="iEb-lW-weD" firstAttribute="leading" secondItem="sZd-Px-vXU" secondAttribute="leading" constant="10" id="spY-gp-t1w"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7cd-Ey-pl5"/>
+                    <connections>
+                        <outlet property="missionName" destination="06S-2a-aUp" id="w0z-dR-HyA"/>
+                        <outlet property="spacePatchImage" destination="Wdv-cD-gn8" id="JjR-OG-ZUa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Sa-ZH-bKW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2418" y="-35"/>
+            <point key="canvasLocation" x="2417.5572519083967" y="-35.211267605633807"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Launches-->
         <scene sceneID="Dib-Ct-Crt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M1r-nk-iqb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="figure.hiking" catalog="system" selectedImage="figure.hiking" id="GnG-6u-Pe3"/>
+                    <tabBarItem key="tabBarItem" title="Launches" image="icons8-rocket-48" selectedImage="icons8-rocket-48" id="GnG-6u-Pe3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XNm-75-JeD">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -161,7 +342,7 @@
             </objects>
             <point key="canvasLocation" x="917" y="-35"/>
         </scene>
-        <!--Hiking Check List-->
+        <!--Launch Watch List-->
         <scene sceneID="LlR-ly-COM">
             <objects>
                 <tableViewController id="c7v-Mr-oFZ" customClass="ListTableTableViewController" customModule="HikingProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -170,7 +351,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="checkListCell" id="bxg-T1-vXg" customClass="checkBoxTableViewCell" customModule="HikingProject" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="launchWatchListCell" id="bxg-T1-vXg" customClass="checkBoxTableViewCell" customModule="HikingProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bxg-T1-vXg" id="syE-Gz-0zc">
@@ -180,7 +361,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Hiking Check List" id="7oC-lS-wDL">
+                    <navigationItem key="navigationItem" title="Launch Watch List" id="7oC-lS-wDL">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3xo-mB-G5b">
                             <connections>
                                 <action selector="addButton:" destination="c7v-Mr-oFZ" id="a9X-lH-UWE"/>
@@ -192,11 +373,11 @@
             </objects>
             <point key="canvasLocation" x="916.79389312977094" y="668.30985915492965"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Watch List-->
         <scene sceneID="Moj-O5-lAH">
             <objects>
                 <navigationController id="U0P-2G-Ums" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" image="checklist" catalog="system" selectedImage="checklist" id="jjR-JA-mnj"/>
+                    <tabBarItem key="tabBarItem" title="Watch List" image="calendar" catalog="system" selectedImage="calendar" id="jjR-JA-mnj"/>
                     <navigationItem key="navigationItem" id="nFS-YU-9wP"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mP3-ic-Q5h">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -219,7 +400,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <tabBarAppearance key="standardAppearance"/>
+                        <tabBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
+                        </tabBarAppearance>
                     </tabBar>
                     <connections>
                         <segue destination="M1r-nk-iqb" kind="relationship" relationship="viewControllers" id="nSt-8t-ocK"/>
@@ -233,17 +416,31 @@
     </scenes>
     <resources>
         <image name="calendar" catalog="system" width="128" height="107"/>
-        <image name="checklist" catalog="system" width="128" height="107"/>
-        <image name="figure.hiking" catalog="system" width="98" height="128"/>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="hou" width="128" height="128"/>
+        <image name="icons8-rocket-48" width="48" height="48"/>
         <image name="rocket.png" width="409.60000610351562" height="409.60000610351562"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <namedColor name="CampGreen">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="Space_Color">
+            <color red="0.001804047248969652" green="0.016114117289944579" blue="0.46615254510309279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

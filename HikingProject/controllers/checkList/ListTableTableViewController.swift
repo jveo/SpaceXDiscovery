@@ -73,7 +73,7 @@ class ListTableTableViewController: UITableViewController {
     private lazy var tableDataSource = UITableViewDiffableDataSource<Section, List>(tableView: tableView){
         tableview, indexPath, taskList in
         
-        let cell = tableview.dequeueReusableCell(withIdentifier: "checkListCell", for: indexPath)
+        let cell = tableview.dequeueReusableCell(withIdentifier: "launchWatchListCell", for: indexPath)
         
         cell.textLabel?.text = taskList.listName
         

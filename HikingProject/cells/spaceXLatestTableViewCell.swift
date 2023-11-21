@@ -26,6 +26,10 @@ class spaceXLatestTableViewCell: UITableViewCell {
         if let customFont = UIFont(name: "MegatransdemoRegular-8M9B0", size: 28){
             missionNameLabel.font = UIFontMetrics(forTextStyle: .title1).scaledFont(for: customFont)
         }
+        
+        layer.borderWidth = 1
+        layer.cornerRadius = 80
+        clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

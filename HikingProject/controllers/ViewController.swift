@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - Aliases
     typealias DataSource = UITableViewDiffableDataSource<Section, Launch>
@@ -26,15 +26,14 @@ class ViewController: UIViewController, UITableViewDataSource {
         spaceXTableView.delegate = self
         spaceXTableView.dataSource = tableDataSource
         spaceXTableView.estimatedRowHeight = 150
-    
-        
+        spaceXTableView.backgroundColor = UIColor(named: "Space_Color")
         fetchUpcomingLaunches()
     }
 
     func fetchUpcomingLaunches(_ query: String? = nil){
         
         let all_launches_api_url = "https://api.spacexdata.com/v3/launches"
-        let upcoming_apiUrl = "https://api.spacexdata.com/v3/launches/upcoming"
+        //let upcoming_apiUrl = "https://api.spacexdata.com/v3/launches/upcoming"
     
         
         guard let url = URL(string: all_launches_api_url) else { return }
@@ -131,9 +130,7 @@ class ViewController: UIViewController, UITableViewDataSource {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: self.latestCellIdentifier, for: index) as! spaceXLatestTableViewCell
         
-            
             self.setCellImage(launch, cell)
-            cell.spaceImage.frame(forAlignmentRect: CGRect(x: 0, y: 0, width: 79, height: 100))
             cell.missionNameLabel.text = launch.missionName
             cell.launchYear.text = launch.launchYear
             cell.rocketName.text = launch.rocket?.rocketName
@@ -142,19 +139,27 @@ class ViewController: UIViewController, UITableViewDataSource {
         return dataSource
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //make sure that you can get an indexpath - this determines what row was tapped
+        guard let index = spaceXTableView.indexPathForSelectedRow else { return }
+        
+        //use the index path to determine what movie object is in that row
+        let itemToPass = tableDataSource.itemIdentifier(for: index)
+        
+        //determine where we are headed
+        let destinationVC = segue.destination as! DetailsViewController
+        //item to pass
+        destinationVC.passedLaunch = itemToPass
+        
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.latestCellIdentifier, for: indexPath) as! spaceXLatestTableViewCell
         print("PRESSED: \(cell)")
         return cell
     }
-
-}
-
-extension ViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
@@ -164,6 +169,24 @@ extension ViewController: UITableViewDelegate {
         print("PRESSED")
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        1
+    }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+            return 0
+    }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return launches.count
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+            let headerView = UIView()
+            headerView.backgroundColor = UIColor.black
+            return headerView
+        }
 }
+
+
+
