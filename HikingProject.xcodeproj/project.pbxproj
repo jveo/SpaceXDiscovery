@@ -17,6 +17,7 @@
 		B4024E092ACF6CDA00651B97 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4024E082ACF6CDA00651B97 /* AddTaskViewController.swift */; };
 		B40B207D2B0C30F10049250C /* rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = B40B207C2B0C30F10049250C /* rocket.png */; };
 		B40B207F2B0C44C50049250C /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40B207E2B0C44C50049250C /* DetailsViewController.swift */; };
+		B4134E0A2B0F69A500C39417 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4134E092B0F69A500C39417 /* WebViewController.swift */; };
 		B4511C0D2B04812300889184 /* All_Launches.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4511C0C2B04812300889184 /* All_Launches.swift */; };
 		B4511C0F2B0494A000889184 /* spaceXLatestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4511C0E2B0494A000889184 /* spaceXLatestTableViewCell.swift */; };
 		B4B0C62F2B06E9B70086BD2B /* Upcoming_Launches.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0C62E2B06E9B70086BD2B /* Upcoming_Launches.swift */; };
@@ -44,6 +45,7 @@
 		B4024E082ACF6CDA00651B97 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		B40B207C2B0C30F10049250C /* rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rocket.png; path = ../../../../../../../../Downloads/rocket.png; sourceTree = "<group>"; };
 		B40B207E2B0C44C50049250C /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		B4134E092B0F69A500C39417 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		B4511C0C2B04812300889184 /* All_Launches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = All_Launches.swift; sourceTree = "<group>"; };
 		B4511C0E2B0494A000889184 /* spaceXLatestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spaceXLatestTableViewCell.swift; sourceTree = "<group>"; };
 		B4B0C62E2B06E9B70086BD2B /* Upcoming_Launches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upcoming_Launches.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				B4024E042ACF642600651B97 /* ViewController.swift */,
 				B4024E082ACF6CDA00651B97 /* AddTaskViewController.swift */,
 				B40B207E2B0C44C50049250C /* DetailsViewController.swift */,
+				B4134E092B0F69A500C39417 /* WebViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4DA30232AD7DA3700FA2E67 /* checkBoxTableViewCell.swift in Sources */,
+				B4134E0A2B0F69A500C39417 /* WebViewController.swift in Sources */,
 				B4B6D0F02AD73E1100C49DC0 /* coreDataStack.swift in Sources */,
 				B4B6D0F92AD741FA00C49DC0 /* List+CoreDataProperties.swift in Sources */,
 				B4511C0D2B04812300889184 /* All_Launches.swift in Sources */,

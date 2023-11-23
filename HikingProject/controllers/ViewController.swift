@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //MARK: Properties
     var latestCellIdentifier = "launchCell"
     var launches = [Launch]()
+    var selectedApi = "https://api.spacexdata.com/v3/launches"
     
     //MARK: viewDidLoad Method
     override func viewDidLoad() {
@@ -27,16 +28,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         spaceXTableView.dataSource = tableDataSource
         spaceXTableView.estimatedRowHeight = 150
         spaceXTableView.backgroundColor = UIColor(named: "Space_Color")
-        fetchUpcomingLaunches()
+        fetchLaunches(selectedApi)
     }
-
-    func fetchUpcomingLaunches(_ query: String? = nil){
-        
-        let all_launches_api_url = "https://api.spacexdata.com/v3/launches"
-        //let upcoming_apiUrl = "https://api.spacexdata.com/v3/launches/upcoming"
     
+    //MARK: IBActions
+    @IBAction func setState(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex{
+        case 1:
+            selectedApi = "https://api.spacexdata.com/v3/launches"
+        case 2:
+            selectedApi = "https://api.spacexdata.com/v3/launches/next"
+        default:
+            selectedApi = ""
+        }
         
-        guard let url = URL(string: all_launches_api_url) else { return }
+        fetchLaunches(selectedApi)
+    }
+    
+
+    func fetchLaunches(_ api: String? = nil){
+
+        guard let url = URL(string: api!) else { return }
         	
         let dataTask = URLSession.shared.dataTask(with: url){
             data, response, error in

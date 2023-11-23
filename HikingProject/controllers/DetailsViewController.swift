@@ -11,25 +11,33 @@ class DetailsViewController: UIViewController {
     
     var passedLaunch: Launch!
 
-    var favouritesButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "heart"), style: .done, target: DetailsViewController.self, action: #selector(addToFavourites))
 
     //MARK: IBOutlets
     @IBOutlet weak var missionName: UILabel!
     @IBOutlet weak var spacePatchImage: UIImageView!
+    @IBOutlet weak var detailsTextView: UITextView!
+    @IBOutlet weak var launchYearLabel: UILabel!
+    @IBOutlet weak var launchSiteLabel: UILabel!
+    @IBOutlet weak var rocketName: UILabel!
+    @IBOutlet weak var rocketType: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.rightBarButtonItem = favouritesButton
-        
         missionName.text = passedLaunch.missionName
+        detailsTextView.text = passedLaunch.details
+        launchYearLabel.text = "Launch Year: \(passedLaunch.launchYear)"
+        launchSiteLabel.text = "Launch Site: \(passedLaunch.launchSite?.siteNameLong ?? "")"
+        rocketName.text = "Rocket: \(passedLaunch.rocket?.rocketName ?? "")"
+        rocketType.text = "Rocket Type: \(passedLaunch.rocket?.rocketType ?? "")"
         setCellImage(passedLaunch, spacePatchImage)
     }
     
-    @objc func addToFavourites(sender: AnyObject) {
-        print("hjxdbsdhjbv")
-    }
+    //MARK: IBAction
+    
+    
 
+    
     //MARK: setCellImage method
      func setCellImage(_ launch: Launch, _ image: UIImageView) {
          //checks if the poster path exists for the selected movie if it doesn't, it displays a system image
@@ -57,14 +65,13 @@ class DetailsViewController: UIViewController {
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if(segue.identifier == "webSeg"){
+            let destinationVC = segue.destination as? WebViewController
+            if let url = passedLaunch.links?.videoLink{
+                destinationVC?.webUrl = url
+            }
+        }
     }
-    */
 
 }
