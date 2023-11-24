@@ -33,6 +33,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZUz-MI-czT">
                                                     <rect key="frame" x="12" y="0.0" width="79" height="100"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="79" id="fpQ-DU-GD8"/>
@@ -164,11 +165,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="373" height="350"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wdv-cD-gn8">
-                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="340"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="350"/>
+                                                        <color key="backgroundColor" name="Space_Color"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UsZ-ta-xaJ">
-                                                        <rect key="frame" x="338" y="311" width="44" height="28"/>
+                                                        <rect key="frame" x="329" y="321" width="44" height="28"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" red="0.91711749659999997" green="0.93227928069999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -177,37 +180,37 @@
                                                     <constraint firstItem="Wdv-cD-gn8" firstAttribute="leading" secondItem="d4u-fd-gPe" secondAttribute="leading" id="7UD-Pj-UNs"/>
                                                     <constraint firstAttribute="trailing" secondItem="Wdv-cD-gn8" secondAttribute="trailing" id="L2L-9y-ROg"/>
                                                     <constraint firstItem="Wdv-cD-gn8" firstAttribute="top" secondItem="d4u-fd-gPe" secondAttribute="top" id="cnZ-9m-1Bj"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Wdv-cD-gn8" secondAttribute="bottom" constant="10" id="e4I-9R-2cd"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Wdv-cD-gn8" secondAttribute="bottom" id="e4I-9R-2cd"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mission Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06S-2a-aUp">
                                                 <rect key="frame" x="0.0" y="358" width="373" height="33.666666666666686"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rocket name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tS-hO-DCo">
                                                 <rect key="frame" x="0.0" y="399.66666666666663" width="373" height="20.333333333333314"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rocket type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Fe-jD-NJF">
                                                 <rect key="frame" x="0.0" y="428" width="373" height="20.333333333333314"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="launch site" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwJ-XE-z95">
                                                 <rect key="frame" x="0.0" y="456.33333333333337" width="373" height="20.333333333333314"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="launch year" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zU9-Cb-BOA">
                                                 <rect key="frame" x="0.0" y="484.66666666666663" width="373" height="20.333333333333314"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IpM-WD-5LL">
@@ -221,9 +224,9 @@
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Oe-pc-SKa">
                                         <rect key="frame" x="0.0" y="505" width="373" height="141"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="Space_Color"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <color key="textColor" systemColor="labelColor"/>
+                                        <color key="textColor" systemColor="groupTableViewBackgroundColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -244,7 +247,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sZd-Px-vXU"/>
-                        <color key="backgroundColor" systemColor="tableBackgroundColor"/>
+                        <color key="backgroundColor" name="Space_Color"/>
                         <constraints>
                             <constraint firstItem="sZd-Px-vXU" firstAttribute="bottom" secondItem="iEb-lW-weD" secondAttribute="bottom" id="Iq3-YF-35H"/>
                             <constraint firstItem="iEb-lW-weD" firstAttribute="top" secondItem="sZd-Px-vXU" secondAttribute="top" constant="20" id="gWT-QJ-MiM"/>
@@ -253,7 +256,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7cd-Ey-pl5">
-                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="chy-fh-X9W">
+                        <barButtonItem key="rightBarButtonItem" image="play.rectangle.fill" catalog="system" id="chy-fh-X9W">
+                            <color key="tintColor" systemColor="systemRedColor"/>
                             <connections>
                                 <action selector="watchVideoButton:" destination="3Gk-MA-rE2" id="e1k-x6-QWD"/>
                             </connections>
@@ -324,7 +328,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YaP-fc-uYP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1155" y="668"/>
+            <point key="canvasLocation" x="921" y="1063"/>
         </scene>
         <!--Watch List-->
         <scene sceneID="Moj-O5-lAH">
@@ -409,6 +413,7 @@
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="heart.circle" catalog="system" width="128" height="123"/>
         <image name="icons8-rocket-48" width="48" height="48"/>
+        <image name="play.rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="rocket.png" width="409.60000610351562" height="409.60000610351562"/>
         <namedColor name="CampGreen">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
@@ -416,8 +421,8 @@
         <namedColor name="Space_Color">
             <color red="0.0020000000949949026" green="0.016000000759959221" blue="0.46599999070167542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -428,8 +433,8 @@
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="tableBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="viewFlipsideBackgroundColor">
             <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

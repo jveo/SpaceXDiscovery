@@ -24,10 +24,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //MARK: viewDidLoad Method
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //tableview methods
         spaceXTableView.delegate = self
         spaceXTableView.dataSource = tableDataSource
         spaceXTableView.estimatedRowHeight = 150
         spaceXTableView.backgroundColor = UIColor(named: "Space_Color")
+        
         fetchLaunches(selectedApi)
         spaceXTableView.reloadData()
     }
@@ -111,6 +114,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     //MARK: setCellImage method
+    //sets the cell image to the provvided cell
      func setCellImage(_ launch: Launch, _ cell: spaceXLatestTableViewCell) {
          //checks if the poster path exists for the selected movie if it doesn't, it displays a system image
          if(launch.links?.missionPatchSmall != nil){
