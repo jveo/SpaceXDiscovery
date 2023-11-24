@@ -18,6 +18,10 @@
 		B40B207D2B0C30F10049250C /* rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = B40B207C2B0C30F10049250C /* rocket.png */; };
 		B40B207F2B0C44C50049250C /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40B207E2B0C44C50049250C /* DetailsViewController.swift */; };
 		B4134E0A2B0F69A500C39417 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4134E092B0F69A500C39417 /* WebViewController.swift */; };
+		B41EC1242B10B1EF004F9C76 /* HistoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41EC1232B10B1EF004F9C76 /* HistoryCollectionViewController.swift */; };
+		B41EC1262B10B256004F9C76 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41EC1252B10B256004F9C76 /* History.swift */; };
+		B41EC1282B10B5CE004F9C76 /* HistoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41EC1272B10B5CE004F9C76 /* HistoryCollectionViewCell.swift */; };
+		B41EC12A2B10B863004F9C76 /* HistoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41EC1292B10B863004F9C76 /* HistoryDetailsViewController.swift */; };
 		B4511C0D2B04812300889184 /* All_Launches.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4511C0C2B04812300889184 /* All_Launches.swift */; };
 		B4511C0F2B0494A000889184 /* spaceXLatestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4511C0E2B0494A000889184 /* spaceXLatestTableViewCell.swift */; };
 		B4B0C62F2B06E9B70086BD2B /* Upcoming_Launches.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0C62E2B06E9B70086BD2B /* Upcoming_Launches.swift */; };
@@ -46,6 +50,10 @@
 		B40B207C2B0C30F10049250C /* rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rocket.png; path = ../../../../../../../../Downloads/rocket.png; sourceTree = "<group>"; };
 		B40B207E2B0C44C50049250C /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		B4134E092B0F69A500C39417 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		B41EC1232B10B1EF004F9C76 /* HistoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCollectionViewController.swift; sourceTree = "<group>"; };
+		B41EC1252B10B256004F9C76 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		B41EC1272B10B5CE004F9C76 /* HistoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		B41EC1292B10B863004F9C76 /* HistoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailsViewController.swift; sourceTree = "<group>"; };
 		B4511C0C2B04812300889184 /* All_Launches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = All_Launches.swift; sourceTree = "<group>"; };
 		B4511C0E2B0494A000889184 /* spaceXLatestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spaceXLatestTableViewCell.swift; sourceTree = "<group>"; };
 		B4B0C62E2B06E9B70086BD2B /* Upcoming_Launches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upcoming_Launches.swift; sourceTree = "<group>"; };
@@ -122,6 +130,8 @@
 				B4024E082ACF6CDA00651B97 /* AddTaskViewController.swift */,
 				B40B207E2B0C44C50049250C /* DetailsViewController.swift */,
 				B4134E092B0F69A500C39417 /* WebViewController.swift */,
+				B41EC1232B10B1EF004F9C76 /* HistoryCollectionViewController.swift */,
+				B41EC1292B10B863004F9C76 /* HistoryDetailsViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -161,6 +171,7 @@
 				B4FD64162B0357B1001CABDA /* API.swift */,
 				B4511C0C2B04812300889184 /* All_Launches.swift */,
 				B4B0C62E2B06E9B70086BD2B /* Upcoming_Launches.swift */,
+				B41EC1252B10B256004F9C76 /* History.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -178,6 +189,7 @@
 			children = (
 				B4DA30222AD7DA3700FA2E67 /* checkBoxTableViewCell.swift */,
 				B4511C0E2B0494A000889184 /* spaceXLatestTableViewCell.swift */,
+				B41EC1272B10B5CE004F9C76 /* HistoryCollectionViewCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -257,6 +269,7 @@
 			files = (
 				B4DA30232AD7DA3700FA2E67 /* checkBoxTableViewCell.swift in Sources */,
 				B4134E0A2B0F69A500C39417 /* WebViewController.swift in Sources */,
+				B41EC1282B10B5CE004F9C76 /* HistoryCollectionViewCell.swift in Sources */,
 				B4B6D0F02AD73E1100C49DC0 /* coreDataStack.swift in Sources */,
 				B4B6D0F92AD741FA00C49DC0 /* List+CoreDataProperties.swift in Sources */,
 				B4511C0D2B04812300889184 /* All_Launches.swift in Sources */,
@@ -268,8 +281,11 @@
 				B40B207F2B0C44C50049250C /* DetailsViewController.swift in Sources */,
 				B4B6D0F32AD740B800C49DC0 /* ToDoLists.xcdatamodeld in Sources */,
 				B4024DE92ACF62CA00651B97 /* SceneDelegate.swift in Sources */,
+				B41EC12A2B10B863004F9C76 /* HistoryDetailsViewController.swift in Sources */,
 				B4024E072ACF6A2700651B97 /* ListTableTableViewController.swift in Sources */,
+				B41EC1262B10B256004F9C76 /* History.swift in Sources */,
 				B4B6D0F82AD741FA00C49DC0 /* List+CoreDataClass.swift in Sources */,
+				B41EC1242B10B1EF004F9C76 /* HistoryCollectionViewController.swift in Sources */,
 				B4024E092ACF6CDA00651B97 /* AddTaskViewController.swift in Sources */,
 				B4511C0F2B0494A000889184 /* spaceXLatestTableViewCell.swift in Sources */,
 				B4B6D0FB2AD741FA00C49DC0 /* TaskItem+CoreDataProperties.swift in Sources */,
