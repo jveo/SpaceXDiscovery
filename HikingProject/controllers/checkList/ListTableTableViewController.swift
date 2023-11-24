@@ -13,10 +13,18 @@ class ListTableTableViewController: UITableViewController {
     //MARK: Properties
     lazy var coreDataStack = CoreDataStack(modelName: "ToDoLists")
     var lists = [List]()
+    var passedLaunch: Launch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.fetchTasks()
+        if(passedLaunch != nil){
+            let newList = List(context: self.coreDataStack.managedContext)
+            newList.listName = passedLaunch.missionName
+            self.coreDataStack.saveContext()
+        }
+        fetchTasks()
+        tableView.reloadData()
+        self.loadTable()
     }
 
     @IBAction func addButton(_ sender: UIBarButtonItem) {

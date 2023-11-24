@@ -29,15 +29,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         spaceXTableView.estimatedRowHeight = 150
         spaceXTableView.backgroundColor = UIColor(named: "Space_Color")
         fetchLaunches(selectedApi)
+        spaceXTableView.reloadData()
     }
     
     //MARK: IBActions
     @IBAction func setState(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex{
-        case 1:
+        case 0:
             selectedApi = "https://api.spacexdata.com/v3/launches"
-        case 2:
-            selectedApi = "https://api.spacexdata.com/v3/launches/next"
+        case 1:
+            selectedApi = "https://api.spacexdata.com/v3/launches/upcoming"
         default:
             selectedApi = ""
         }

@@ -166,6 +166,10 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wdv-cD-gn8">
                                                         <rect key="frame" x="0.0" y="0.0" width="373" height="340"/>
                                                     </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UsZ-ta-xaJ">
+                                                        <rect key="frame" x="338" y="311" width="44" height="28"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -248,21 +252,29 @@
                             <constraint firstItem="iEb-lW-weD" firstAttribute="leading" secondItem="sZd-Px-vXU" secondAttribute="leading" constant="10" id="spY-gp-t1w"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7cd-Ey-pl5"/>
+                    <navigationItem key="navigationItem" id="7cd-Ey-pl5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="chy-fh-X9W">
+                            <connections>
+                                <action selector="watchVideoButton:" destination="3Gk-MA-rE2" id="e1k-x6-QWD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="detailsTextView" destination="8Oe-pc-SKa" id="sdN-g4-Cf4"/>
+                        <outlet property="favouritesTap" destination="UsZ-ta-xaJ" id="CuH-pk-SBW"/>
                         <outlet property="launchSiteLabel" destination="JwJ-XE-z95" id="1K3-69-DvE"/>
                         <outlet property="launchYearLabel" destination="zU9-Cb-BOA" id="C1X-dJ-68K"/>
                         <outlet property="missionName" destination="06S-2a-aUp" id="w0z-dR-HyA"/>
                         <outlet property="rocketName" destination="0tS-hO-DCo" id="flL-u5-NM3"/>
                         <outlet property="rocketType" destination="7Fe-jD-NJF" id="TFO-4n-oYF"/>
                         <outlet property="spacePatchImage" destination="Wdv-cD-gn8" id="JjR-OG-ZUa"/>
-                        <segue destination="iKW-Tn-58r" kind="show" id="7cg-GM-DJN"/>
+                        <segue destination="iKW-Tn-58r" kind="show" identifier="webSeg" id="7cg-GM-DJN"/>
+                        <segue destination="c7v-Mr-oFZ" kind="show" identifier="favSeg" id="fch-Sq-KjU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Sa-ZH-bKW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2550" y="-344"/>
+            <point key="canvasLocation" x="2547.3282442748091" y="-344.36619718309862"/>
         </scene>
         <!--Launches-->
         <scene sceneID="Dib-Ct-Crt">
@@ -312,7 +324,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YaP-fc-uYP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131" y="1401"/>
+            <point key="canvasLocation" x="1155" y="668"/>
         </scene>
         <!--Watch List-->
         <scene sceneID="Moj-O5-lAH">
@@ -381,14 +393,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3g9-dE-0Pz"/>
+                    <connections>
+                        <outlet property="webView" destination="fIf-se-qCt" id="u04-mV-eMF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RH2-Pu-VJq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2433" y="489"/>
+            <point key="canvasLocation" x="3473" y="-528"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fch-Sq-KjU"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="heart.circle" catalog="system" width="128" height="123"/>
         <image name="icons8-rocket-48" width="48" height="48"/>
         <image name="rocket.png" width="409.60000610351562" height="409.60000610351562"/>
         <namedColor name="CampGreen">
@@ -401,13 +420,13 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tableBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

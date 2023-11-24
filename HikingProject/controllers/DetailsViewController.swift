@@ -9,8 +9,8 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
+    //MARK: Properties
     var passedLaunch: Launch!
-
 
     //MARK: IBOutlets
     @IBOutlet weak var missionName: UILabel!
@@ -20,6 +20,8 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var launchSiteLabel: UILabel!
     @IBOutlet weak var rocketName: UILabel!
     @IBOutlet weak var rocketType: UILabel!
+    @IBOutlet weak var favouritesTap: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +33,30 @@ class DetailsViewController: UIViewController {
         rocketName.text = "Rocket: \(passedLaunch.rocket?.rocketName ?? "")"
         rocketType.text = "Rocket Type: \(passedLaunch.rocket?.rocketType ?? "")"
         setCellImage(passedLaunch, spacePatchImage)
+        
+        favouritesTap.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(_addToFavourites)))
+        favouritesTap.isUserInteractionEnabled = true
+        
     }
     
-    //MARK: IBAction
+    //MARK: IBAction methods
+    @IBAction func watchVideoButton(_ sender: Any) {
+        print("Pressed play")
+        performSegue(withIdentifier: "webSeg", sender: self)
+    }
     
+    @objc func _addToFavourites(){
+        let alert = UIAlertController(title: "Add", message: "Would you like to add \(passedLaunch.missionName) to your favourites?", preferredStyle: .alert)
     
-
+        let addListAction = UIAlertAction(title: "Add", style: .default, handler: {action in
+            self.performSegue(withIdentifier: "favSeg", sender: nil)})
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(addListAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
+    }
+    
     
     //MARK: setCellImage method
      func setCellImage(_ launch: Launch, _ image: UIImageView) {
@@ -72,6 +92,12 @@ class DetailsViewController: UIViewController {
                 destinationVC?.webUrl = url
             }
         }
+        
+        if(segue.identifier == "favSeg"){
+            let vc = segue.destination as? ListTableTableViewController
+            vc?.passedLaunch = passedLaunch
+        }
     }
+    
 
 }
