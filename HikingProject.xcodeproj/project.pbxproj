@@ -15,7 +15,6 @@
 		B4024E052ACF642600651B97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4024E042ACF642600651B97 /* ViewController.swift */; };
 		B4024E072ACF6A2700651B97 /* ListTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4024E062ACF6A2700651B97 /* ListTableTableViewController.swift */; };
 		B4024E092ACF6CDA00651B97 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4024E082ACF6CDA00651B97 /* AddTaskViewController.swift */; };
-		B40B207D2B0C30F10049250C /* rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = B40B207C2B0C30F10049250C /* rocket.png */; };
 		B40B207F2B0C44C50049250C /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40B207E2B0C44C50049250C /* DetailsViewController.swift */; };
 		B4134E0A2B0F69A500C39417 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4134E092B0F69A500C39417 /* WebViewController.swift */; };
 		B41EC1242B10B1EF004F9C76 /* HistoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41EC1232B10B1EF004F9C76 /* HistoryCollectionViewController.swift */; };
@@ -47,7 +46,6 @@
 		B4024E042ACF642600651B97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B4024E062ACF6A2700651B97 /* ListTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableTableViewController.swift; sourceTree = "<group>"; };
 		B4024E082ACF6CDA00651B97 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
-		B40B207C2B0C30F10049250C /* rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rocket.png; path = ../../../../../../../../Downloads/rocket.png; sourceTree = "<group>"; };
 		B40B207E2B0C44C50049250C /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		B4134E092B0F69A500C39417 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		B41EC1232B10B1EF004F9C76 /* HistoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCollectionViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 		B4024DE52ACF62CA00651B97 /* HikingProject */ = {
 			isa = PBXGroup;
 			children = (
-				B40B20792B0C301A0049250C /* Images */,
 				B4B0C6312B0708140086BD2B /* Fonts */,
 				B4DA30212AD7DA1D00FA2E67 /* cells */,
 				B4B6D0EE2AD73DFE00C49DC0 /* coreData */,
@@ -134,14 +131,6 @@
 				B41EC1292B10B863004F9C76 /* HistoryDetailsViewController.swift */,
 			);
 			path = controllers;
-			sourceTree = "<group>";
-		};
-		B40B20792B0C301A0049250C /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				B40B207C2B0C30F10049250C /* rocket.png */,
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 		B4B0C6312B0708140086BD2B /* Fonts */ = {
@@ -253,7 +242,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4024DF32ACF62CB00651B97 /* LaunchScreen.storyboard in Resources */,
-				B40B207D2B0C30F10049250C /* rocket.png in Resources */,
 				B4024DF02ACF62CB00651B97 /* Assets.xcassets in Resources */,
 				B4024DEE2ACF62CA00651B97 /* Main.storyboard in Resources */,
 				B4B0C6332B07086C0086BD2B /* MegatransdemoRegular-8M9B0.otf in Resources */,
